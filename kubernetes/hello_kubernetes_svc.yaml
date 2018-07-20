@@ -1,0 +1,20 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  annotations: {}
+  finalizers: []
+  labels:
+    app: "hello_kubernetes"
+  name: "ballerina-demo"
+  ownerReferences: []
+spec:
+  externalIPs: []
+  loadBalancerSourceRanges: []
+  ports:
+  - port: 8888
+    protocol: "TCP"
+    targetPort: 8888
+  selector:
+    app: "hello_kubernetes"
+  type: "NodePort"
